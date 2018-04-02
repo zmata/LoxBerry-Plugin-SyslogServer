@@ -170,7 +170,7 @@ $CFG['DiskAllowed'][] = "REPLACELBPLOGDIR/";
         $CFG['Sources']['Source2']['ViewID'] = "SYSLOG";
 */
 
-$mask = $lbpconfigdir. '/loganalyzer/*.php';
+$mask = "REPLACELBPCONFIGDIR/loganalyzer/*.php';
 foreach (glob($mask) as $file) {
     include $file;
 
