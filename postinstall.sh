@@ -57,5 +57,8 @@ echo "<INFO> Plugin CONFIG folder is: $PCONFIG"
 echo "<INFO> Plugin SBIN folder is: $PSBIN"
 echo "<INFO> Plugin BIN folder is: $PBIN"
 
+ln -s $PCONFIG/syslogserver.conf /etc/rsyslog.d/plugin-syslogserver.conf
+systemctl restart rsyslog.service
+
 # Exit with Status 0
 exit 0
