@@ -103,7 +103,7 @@ $CFG['PopupMenuTimeout'] = 3000;                        // This variable defines
 $CFG['PhplogconLogoUrl'] = "";                          // Put an Url to a custom toplogo you want to use.
 $CFG['InlineOnlineSearchIcons'] = 1;            // Show online search icons
 $CFG['UseProxyServerForRemoteQueries'] = "";// If empty no proxy server will be used. If set to a proxy server url like 127.0.0.1:8080, LogAnalyzer will use this server for url queries like the updatecheck. 
-$CFG['HeaderDefaultEncoding'] = ENC_ISO_8859_1; // Set default character encoding
+$CFG['HeaderDefaultEncoding'] = ENC_UTF8; // Set default character encoding
 $CFG['DefaultFont'] = "Arial";                          // Sets the default Font to be used in Loganalyzer
 $CFG['DefaultFontSize'] = "100";                        // Sets the percentage font size, default is 100 (Percent). Can be changed up to 200 and down to 50 with good results.  
 // ---
@@ -173,3 +173,5 @@ $CFG['DiskAllowed'][] = "REPLACELBPLOGDIR/";
 $mask = $lbpconfigdir. '/loganalyzer/*.php';
 foreach (glob($mask) as $file) {
     include $file;
+
+?>
