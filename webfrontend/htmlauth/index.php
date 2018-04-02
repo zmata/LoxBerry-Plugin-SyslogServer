@@ -15,7 +15,7 @@ function zmata_option_set($optval, $value) {
 
 $L = LBWeb::readlanguage("language.ini");
 
-$template_title = "Modbus Gateway";
+$template_title = "Syslog Server";
 //$helplink = "http://www.loxwiki.eu/display/LOXBERRY/Modbus+Gateway";
 $helplink = $L['LINKS.WIKI'];
 

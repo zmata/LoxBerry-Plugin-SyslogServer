@@ -140,10 +140,6 @@ $CFG['Charts'][] = array ( "DisplayName" => "Usage by Day", "chart_type" => CHAR
 // ---
 
 // --- Configure allowed directories for File base logstream sources
-$CFG['DiskAllowed'][] = "/opt/loxberry/log/plugins/syslogserver/"; 
-// ---
-
-// --- Configure allowed directories for File base logstream sources
 $CFG['DiskAllowed'][] = "REPLACELBPLOGDIR/"; 
 // ---
 
@@ -174,10 +170,6 @@ $CFG['DiskAllowed'][] = "REPLACELBPLOGDIR/";
         $CFG['Sources']['Source2']['ViewID'] = "SYSLOG";
 */
 
-$logconf_dir = $lbpconfigdir. '/loganalyzer';
-if ($handle = opendir($logconf_dir)) {
-    while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != "..") 
-          include $logconf_dir. '/'. $entry;
-    }
-}
+$mask = $lbpconfigdir. '/loganalyzer/*.php';
+foreach (glob($mask) as $file) {
+    include $file;
