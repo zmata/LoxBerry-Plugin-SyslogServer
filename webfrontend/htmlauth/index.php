@@ -25,7 +25,7 @@ $navbar[1]['Name'] = $L['NAVBAR.FIRST'];
 $navbar[1]['URL'] = 'index.php';
 
 $navbar[2]['Name'] = $L['NAVBAR.SECOND'];
-$navbar[2]['URL'] = 'configuration.php';
+$navbar[2]['URL'] = 'loganalyzer/index.php';
 
 
 // NAVBAR
