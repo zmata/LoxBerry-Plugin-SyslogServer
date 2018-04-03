@@ -54,6 +54,11 @@ if ($_POST['save_del']) {
   $file = $lbpconfigdir. '/'. $_POST['name']. '.ini';
   unlink($file);
 
+  //logfile
+  $file = $lbplogdir. '/'. $_POST['name']. '.log';
+  unlink($file);
+
+  //restart rsyslog
   $command = 'sudo '. $lbpbindir. '/service.sh restart rsyslog.service';
   $status = shell_exec($command);
 
