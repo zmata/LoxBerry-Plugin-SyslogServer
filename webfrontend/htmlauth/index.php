@@ -16,7 +16,7 @@ $navbar[1]['URL'] = 'index.php';
 
 $navbar[2]['Name'] = $L['NAVBAR.SECOND'];
 $navbar[2]['URL'] = 'loganalyzer/index.php';
-
+$navbar[2]['target'] = '_blank';
 
 if ($_POST['save_new']) {
   zmata_new_config($lbpconfigdir, $lbplogdir, $_POST['name'], $_POST['ip']);
