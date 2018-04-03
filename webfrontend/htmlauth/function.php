@@ -16,7 +16,7 @@ function zmata_new_rsyslog($confdir, $logdir, $name, $ip) {
   $file = $confdir. '/rsyslog.d/'. $name. '.conf';
   $text = ':fromhost-ip, isequal, "'. $ip. '" '. $logdir. '/'. $name. '.log';
   file_put_contents($file, $text. PHP_EOL, LOCK_EX);
-  $text = '& ~';
+  $text = '& stop';
   file_put_contents($file, $text. PHP_EOL, FILE_APPEND | LOCK_EX);
 }
 

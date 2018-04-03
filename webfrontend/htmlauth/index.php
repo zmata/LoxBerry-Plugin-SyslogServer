@@ -134,20 +134,23 @@ else {
       $logname = $name;
       $logip   = $ip;
     }
+    $found = 'X';
   }
-  echo '<br><br>';
+  if ($found) {
+    echo '<br><br>';
 
-  //DETAILS
-  echo '<p class="wide">'. $L['LOGDETAIL.HEAD']. '</p>';
-  echo '<div>';
-  echo '<form action="index.php" method="post">';
-  echo '<label for="name">'. $L['LOGS.NAME']. '</label>';
-  echo '<input data-inline="true" data-mini="true" name="name" id="name" placeholder="Text input" value='. $logname. ' type="text" disabled="disabled">';
-  echo '<label for="ip">'. $L['LOGS.IP']. '</label>';
-  echo '<input data-inline="true" data-mini="true" name="ip" id="ip" placeholder="Text input" value='. $logip. ' type="text">'; 
-  echo '<input data-role="button" data-inline="true" data-mini="true" data-icon="check" type="submit" name="change" value='. $L['LOGS.SAVE']. '>'; 
-  echo '</form>';
-  echo '</div>';
+    //DETAILS
+    echo '<p class="wide">'. $L['LOGDETAIL.HEAD']. '</p>';
+    echo '<div>';
+    echo '<form action="index.php" method="post">';
+    echo '<label for="name">'. $L['LOGS.NAME']. '</label>';
+    echo '<input data-inline="true" data-mini="true" name="name" id="name" placeholder="Text input" value='. $logname. ' type="text" disabled="disabled">';
+    echo '<label for="ip">'. $L['LOGS.IP']. '</label>';
+    echo '<input data-inline="true" data-mini="true" name="ip" id="ip" placeholder="Text input" value='. $logip. ' type="text">'; 
+    echo '<input data-role="button" data-inline="true" data-mini="true" data-icon="check" type="submit" name="change" value='. $L['LOGS.SAVE']. '>'; 
+    echo '</form>';
+    echo '</div>';
+  }
 }
 
 LBWeb::lbfooter();
