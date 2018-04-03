@@ -60,6 +60,12 @@ echo "<INFO> Plugin SBIN folder is: $PSBIN"
 echo "<INFO> Plugin BIN folder is: $PBIN"
 
 ln -s $PCONFIG/syslogserver.conf /etc/rsyslog.d/plugin-syslogserver.conf
+
+sed -i 's/#module(load="imudp")/module(load="imudp")/g' /etc/rsyslog.conf
+sed -i 's/#input(type="imudp" port="514")/input(type="imudp" port="514")/g' /etc/rsyslog.conf
+sed -i 's/#module(load="imtcp")/module(load="imtcp")/g' /etc/rsyslog.conf
+sed -i 's/#input(type="imtcp" port="514")/input(type="imtcp" port="514")/g' /etc/rsyslog.conf
+
 systemctl restart rsyslog.service
 
 # Exit with Status 0

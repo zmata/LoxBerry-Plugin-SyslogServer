@@ -1,3 +1,4 @@
+<?php
 /* Example:
 $CFG['DefaultSourceID'] = 'Source1';
 $CFG['Sources']['Source1']['ID'] = 'Source1';
@@ -5,6 +6,7 @@ $CFG['Sources']['Source1']['Name'] = 'Example';
 $CFG['Sources']['Source1']['ViewID'] = 'SYSLOG';
 $CFG['Sources']['Source1']['SourceType'] = SOURCE_DISK;
 $CFG['Sources']['Source1']['LogLineType'] = 'misc';
-$CFG['Sources']['Source1']['DiskFile'] = '/opt/loxberry/log/plugins/syslogserver/test.log';
+$CFG['Sources']['Source1']['DiskFile'] = 'REPLACELBPLOGDIR/test.log';
 */
+?>
 

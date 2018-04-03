@@ -1,2 +1,2 @@
 :fromhost-ip, isequal, "192.168.1.10" REPLACELBPLOGDIR/miniserver.log
-& ~
+& stop
