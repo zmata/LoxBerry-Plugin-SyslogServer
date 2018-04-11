@@ -33,7 +33,6 @@ if ($_POST['change']) {
   zmata_new_config($lbpconfigdir, $lbplogdir, $_POST['name'], $_POST['ip']);
   zmata_new_rsyslog($lbpconfigdir, $lbplogdir, $_POST['name'], $_POST['ip']);
   zmata_new_loganalyzer($lbpconfigdir, $lbplogdir, $_POST['name'], $_POST['ip']);
-  header ("Location: index.php");
 
   $command = 'sudo '. $lbpbindir. '/service.sh restart rsyslog.service';
   $status = shell_exec($command);
@@ -93,6 +92,7 @@ elseif ($_POST['req_del']) {
   echo '<p>'. $L['LOGS.DELTEXT2']. '</p>';
   echo '<form action="index.php" method="post">';
   echo '<input type="hidden" name="name" value="'. $_POST['name']. '">';
+  echo '<input type="hidden" name="ip" value="'. $_POST['ip']. '">';
   echo '<input data-role="button" data-inline="true" data-mini="true" data-icon="delete" type="submit" name="save_del" value='. $L['LOGS.DELETE']. '>';
   echo '<input data-role="button" data-inline="true" data-mini="true" data-icon="back" type="submit" name="return" value='. $L['LOGS.RETURN']. '>';
   echo '</form></dev>';
