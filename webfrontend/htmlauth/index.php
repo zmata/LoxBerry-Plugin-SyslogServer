@@ -95,7 +95,7 @@ elseif ($_POST['req_del']) {
   echo '<input type="hidden" name="ip" value="'. $_POST['ip']. '">';
   echo '<input data-role="button" data-inline="true" data-mini="true" data-icon="delete" type="submit" name="save_del" value='. $L['LOGS.DELETE']. '>';
   echo '<input data-role="button" data-inline="true" data-mini="true" data-icon="back" type="submit" name="return" value='. $L['LOGS.RETURN']. '>';
-  echo '</form></dev>';
+  echo '</form></div>';
 }
 
 //MAIN
